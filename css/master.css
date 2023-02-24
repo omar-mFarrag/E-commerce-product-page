@@ -155,11 +155,13 @@
     max-width: 100%;
     cursor: pointer;
 }
-.thumbnails div:nth-child(1){
+.thumbnails .current{
     border: solid 4px #fe801f;
+    transition: .3s;
 }
-.thumbnails div:nth-child(1) img{
+.thumbnails .current img{
     opacity: .5;
+    transition: .3s;
 }
 .flex-box .info{
     padding: 50px 10px;
@@ -375,10 +377,10 @@
 .cart .cart-content{
     position: absolute;
     background-color: white;
-    box-shadow: -3px 16px 15px -5px #a3a3a3;
+    box-shadow: 0px 0px 20px -5px #000000;
     top: 100%;
     transform: translate(-28%, 50px);
-    z-index: 123;
+    z-index: 1;
     border-radius: 10px;
     overflow: hidden;
     width: fit-content;
@@ -473,8 +475,35 @@
     align-items: center;
     font-weight: bold;
     opacity: 0;
+    cursor: pointer;
 }
-
+.miga-menu{
+    display: none;
+}
 @media (max-width: 767px) {
-    
+    .miga-menu{
+        width: 60%;
+        display: block;
+        position: absolute;
+        z-index: 999999;
+        height: 100%;
+        background-color: white;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        transform: translateX(-120%);
+        transition: .5s;
+    }
+    .miga-menu img{
+        margin-bottom: 60px;
+    }
+    .miga-menu ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .miga-menu ul li{
+        font-size: 20px;
+    }
 }
