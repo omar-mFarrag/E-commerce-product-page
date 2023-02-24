@@ -22,8 +22,14 @@
         </ul>
       </nav>
       <div class="left-side">
-        <img src="./images/icon-cart.svg" alt="">
-        <img src="./images/image-avatar.png" alt="">
+        <div class="cart" id="cart">
+          <img src="./images/icon-cart.svg" alt="" onclick="cartContentShow();">
+          <div class="cart-content" id="cart-content">
+            <h4>Cart</h4>
+            <P>Your cart is empty.</P>
+          </div>
+        </div>
+        <img class="profile" src="./images/image-avatar.png" alt="">
       </div>
     </div>
     <div class="content">
@@ -63,9 +69,9 @@
           </div>
           <div class="add-to-cart">
           <div class="counter">
-            <img src="./images/icon-minus.svg" alt="">
-            <span>0</span>
-            <img src="./images/icon-plus.svg" alt="">
+            <img onclick="minusCounter();" src="./images/icon-minus.svg" alt="">
+            <span id="count">0</span>
+            <img onclick="plusCounter();" src="./images/icon-plus.svg" alt="">
           </div>
           <button>
             <img src="./images/icon-cart.svg" alt="">
@@ -76,5 +82,6 @@
       </div>
     </div>
   </div>
+  <script src="./js/scripts.js"></script>
 </body>
 </html>
